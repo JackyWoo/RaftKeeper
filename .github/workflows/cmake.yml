@@ -26,9 +26,6 @@ jobs:
     - name: Echo clang
       run: which clang
 
-    - name: Echo clang-13
-      run: which clang-13
-
     - name: Echo clang version
       run: clang --version
 #
