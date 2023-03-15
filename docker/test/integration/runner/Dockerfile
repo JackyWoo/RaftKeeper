@@ -72,7 +72,6 @@ RUN python3 -m pip install \
     lz4 \
     minio \
     protobuf \
-    psycopg2-binary==2.8.6 \
     pytest \
     pytest-order==1.0.0 \
     pytest-timeout \

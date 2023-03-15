@@ -3,13 +3,6 @@ FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive LLVM_VERSION=13
 
-# For Chainese users, if there is something wrong, just comment it.
-#RUN echo "# use mirrors" > /etc/apt/sources.list
-#RUN echo "deb [trusted=yes] http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse" >> /etc/apt/sources.list
-#RUN echo "deb [trusted=yes] http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse" >> /etc/apt/sources.list
-#RUN echo "deb [trusted=yes] http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
-#RUN echo "deb [trusted=yes] http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse" >> /etc/apt/sources.list
-
 # ARG for quick switch to a given ubuntu mirror
 ARG apt_archive="http://mirrors.tuna.tsinghua.edu.cn"
 RUN sed -i "s|http://archive.ubuntu.com|$apt_archive|g" /etc/apt/sources.list
